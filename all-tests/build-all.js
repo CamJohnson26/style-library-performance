@@ -184,6 +184,9 @@ async function generateBundleSizesAPI() {
     const bundleSizesJson = JSON.stringify(bundleSizes, null, 2);
     await fs.writeFile(path.join(apiDir, 'bundle-sizes'), bundleSizesJson);
     
+    // Also create a JSON file for GitHub Pages
+    await fs.writeFile(path.join(apiDir, 'bundle-sizes.json'), bundleSizesJson);
+    
     console.log('  ✅ Bundle sizes API generated');
     console.log(`  📊 Total projects: ${Object.keys(bundleSizes).length}`);
     console.log(`  📦 Total bundle size: ${Object.values(bundleSizes).reduce((a, b) => a + b, 0)} KB`);

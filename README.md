@@ -1,322 +1,109 @@
-# Styling Library Performance Test
+# Styling Library Performance Dashboard
 
-This project contains eleven separate React applications, each using a different styling approach to test and compare their performance characteristics.
+A comprehensive dashboard comparing the performance of 14 different CSS-in-JS and styling frameworks.
 
-## Projects Overview
+## 🚀 Live Demo
 
-### 1. test-dom (Vanilla CSS)
+The dashboard is deployed to GitHub Pages and available at:
+**https://camjohnson26.github.io/style-library-performance/**
 
-- **Styling**: Pure CSS with custom classes
-- **Approach**: Traditional CSS with custom properties and utility classes
-- **Bundle Size**: Minimal (no external styling dependencies)
+## 📊 What's Included
 
-### 2. test-mui (Material-UI)
+This dashboard compares:
 
-- **Styling**: Material-UI components with Emotion
-- **Approach**: Component-based styling with theme system
-- **Bundle Size**: Larger (includes MUI components and Emotion)
+- **Bundle Sizes** - Real bundle size calculations from built projects
+- **Performance Metrics** - Render times, interaction performance, memory usage
+- **Library Information** - Release years, origins, styling strategies
+- **Interactive Testing** - Click on any library to run its performance test
 
-### 3. test-tailwind (Tailwind CSS)
+## 🎨 Libraries Tested
 
-- **Styling**: Tailwind CSS utility classes
-- **Approach**: Utility-first CSS framework
-- **Bundle Size**: Medium (includes Tailwind CSS)
+1. **Vanilla CSS** (1996) - Pure CSS with custom properties
+2. **Material-UI** (2014) - Google's Material Design components
+3. **Tailwind CSS** (2017) - Utility-first CSS framework
+4. **shadcn/ui** (2022) - Radix UI + Tailwind components
+5. **Radix UI** (2020) - Unstyled, accessible primitives
+6. **Chakra UI** (2019) - Modular component library
+7. **Reshaped** (2023) - Modern React component library
+8. **Panda CSS** (2023) - Build-time CSS-in-JS
+9. **Base UI** (2022) - Unstyled MUI components
+10. **Styled Components** (2016) - Runtime CSS-in-JS
+11. **Bootstrap** (2011) - Popular CSS framework
+12. **Class Variance Authority** (2021) - Type-safe utilities
+13. **Stitches** (2020) - Zero-runtime CSS-in-JS
+14. **Vanilla Extract** (2020) - Zero-runtime CSS-in-TypeScript
 
-### 4. test-shadcn (shadcn/ui)
-
-- **Styling**: Radix UI primitives with Tailwind CSS
-- **Approach**: Headless components with utility-first styling
-- **Bundle Size**: Medium (includes Radix UI and Tailwind)
-
-### 5. test-radix (Radix UI)
-
-- **Styling**: Radix UI primitives with custom CSS
-- **Approach**: Unstyled, accessible components
-- **Bundle Size**: Medium (includes Radix UI primitives)
-
-### 6. test-chakra (Chakra UI)
-
-- **Styling**: Chakra UI components with Emotion
-- **Approach**: Component-based styling with theme system
-- **Bundle Size**: Large (includes Chakra UI and Emotion)
-
-### 7. test-reshaped (Reshaped)
-
-- **Styling**: Reshaped design system components
-- **Approach**: Modern React component library with theme system
-- **Bundle Size**: Medium (includes Reshaped components)
-
-### 8. test-panda-css (Panda CSS)
-
-- **Styling**: Build-time CSS-in-JS with Panda CSS
-- **Approach**: Type-safe styling with compile-time generation
-- **Bundle Size**: Small (build-time CSS generation)
-
-### 9. test-base-ui (Base UI)
-
-- **Styling**: MUI Base components with custom CSS
-- **Approach**: Unstyled, accessible components
-- **Bundle Size**: Small (minimal unstyled components)
-
-### 10. test-styled-components (Styled Components)
-
-- **Styling**: Styled Components with CSS-in-JS
-- **Approach**: Runtime CSS-in-JS with template literals
-- **Bundle Size**: Medium (includes styled-components runtime)
-
-### 11. test-bootstrap (Bootstrap)
-
-- **Styling**: Bootstrap 5 with React Bootstrap components
-- **Approach**: Utility-first CSS framework with component library
-- **Bundle Size**: Large (includes Bootstrap CSS and React Bootstrap)
-
-## Performance Metrics
-
-Each application measures the following performance indicators:
-
-- **Render Time**: Time taken to render a specified number of components
-- **Interaction Time**: Time taken to respond to user interactions (clicks, toggles)
-- **Memory Usage**: JavaScript heap memory consumption
-- **Component Count**: Number of components rendered
-
-## Getting Started
+## 🛠️ Local Development
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js 18+
 - npm or pnpm
 
-### Installation
-
-1. Navigate to each project directory and install dependencies:
-
-   ```bash
-   # Original projects
-   cd test-dom && npm install && cd ..
-   cd test-mui && npm install && cd ..
-   cd test-tailwind && npm install && cd ..
-   cd test-shadcn && npm install && cd ..
-   cd test-radix && npm install && cd ..
-   cd test-chakra && npm install && cd ..
-
-   # New projects
-   cd test-reshaped && npm install && cd ..
-   cd test-panda-css && npm install && cd ..
-   cd test-base-ui && npm install && cd ..
-   cd test-styled-components && npm install && cd ..
-   cd test-bootstrap && npm install && cd ..
-   ```
-
-### Running the Tests
-
-#### Option 1: Run All Projects Simultaneously (Recommended)
-
-Use the provided script to start all projects at once:
+### Setup
 
 ```bash
-./run-all.sh
+# Clone the repository
+git clone https://github.com/camjohnson26/style-library-performance.git
+cd style-library-performance
+
+# Install dependencies for the dashboard
+cd all-tests
+npm install
+
+# Build all projects and start the dashboard
+npm start
 ```
 
-This will start all 11 projects on different ports:
+The dashboard will be available at `http://localhost:8080`
 
-- Vanilla CSS: http://localhost:5173
-- Material-UI: http://localhost:5174
-- Tailwind CSS: http://localhost:5175
-- shadcn/ui: http://localhost:5176
-- Radix UI: http://localhost:5177
-- Chakra UI: http://localhost:5178
-- Reshaped: http://localhost:5179
-- Panda CSS: http://localhost:5180
-- Base UI: http://localhost:5181
-- Styled Components: http://localhost:5185
-- Bootstrap: http://localhost:5186
+### Individual Project Testing
 
-To stop all projects:
+Each styling library has its own test project that you can run individually:
 
 ```bash
-./stop-all.sh
+# Example: Run Material-UI test
+cd test-mui
+npm install
+npm run dev
 ```
 
-#### Option 2: Run Individual Projects
+## 📈 Performance Metrics
 
-Start each application individually in separate terminals:
+Each test measures:
 
-```bash
-# Terminal 1 - Vanilla CSS
-cd test-dom && npm run dev
+- **Render Time** - Time to render components
+- **Interaction Time** - Response time for user interactions
+- **Memory Usage** - JavaScript heap consumption
+- **Bundle Size** - Actual built file sizes
 
-# Terminal 2 - Material-UI
-cd test-mui && npm run dev
+## 🔧 Technical Details
 
-# Terminal 3 - Tailwind CSS
-cd test-tailwind && npm run dev
+- **Build System** - Automated build process for all 14 projects
+- **Asset Optimization** - Proper base path configuration for subdirectory serving
+- **Real Bundle Sizes** - Calculated from actual built files
+- **Responsive Design** - Works on desktop and mobile
+- **GitHub Pages** - Automated deployment via GitHub Actions
 
-# Terminal 4 - shadcn/ui
-cd test-shadcn && npm run dev
+## 📝 Contributing
 
-# Terminal 5 - Radix UI
-cd test-radix && npm run dev
+To add a new styling library:
 
-# Terminal 6 - Chakra UI
-cd test-chakra && npm run dev
+1. Create a new test project directory (`test-{library-name}`)
+2. Add it to the `TEST_PROJECTS` array in `all-tests/build-all.js`
+3. Add library information to the `libraryData` array in `all-tests/src/script.js`
+4. Run `npm run build` in the all-tests directory
+5. Submit a pull request
 
-# Terminal 7 - Reshaped
-cd test-reshaped && npm run dev
+## 🚀 Deployment
 
-# Terminal 8 - Panda CSS
-cd test-panda-css && npm run dev
+The dashboard is automatically deployed to GitHub Pages when changes are pushed to the main branch. The deployment process:
 
-# Terminal 9 - Base UI
-cd test-base-ui && npm run dev
+1. Builds all 14 test projects
+2. Copies assets with correct base paths
+3. Generates bundle size data
+4. Deploys to GitHub Pages
 
-# Terminal 10 - Styled Components
-cd test-styled-components && npm run dev
-
-# Terminal 11 - Bootstrap
-cd test-bootstrap && npm run dev
-```
-
-## How to Use
-
-1. **Set Component Count**: Use the input field to specify how many components to render (10-10,000)
-2. **Run Stress Test**: Click "Render X Items" to generate and render the specified number of components
-3. **Interact with Components**: Click on individual items to test interaction performance
-4. **Bulk Operations**: Use "Toggle All Items" to test bulk state updates
-5. **View Metrics**: Toggle the comparison panel to see performance statistics
-6. **Export Data**: Export metrics as JSON for further analysis
-
-## Testing Scenarios
-
-### Basic Rendering Test
-
-- Render 100, 500, 1000, 2000, 5000 components
-- Measure initial render time
-- Compare memory usage
-
-### Interaction Performance Test
-
-- Click individual components
-- Toggle all components at once
-- Measure response times
-
-### Memory Stress Test
-
-- Gradually increase component count
-- Monitor memory usage patterns
-- Test garbage collection behavior
-
-## Expected Results
-
-Based on typical performance characteristics:
-
-### Vanilla CSS (test-dom)
-
-- **Fastest render times** (minimal overhead)
-- **Lowest memory usage** (no framework overhead)
-- **Fastest interactions** (direct DOM manipulation)
-
-### Material-UI (test-mui)
-
-- **Slower initial render** (component overhead)
-- **Higher memory usage** (component instances + Emotion)
-- **Consistent interaction times** (optimized components)
-
-### Tailwind CSS (test-tailwind)
-
-- **Medium render times** (utility class processing)
-- **Medium memory usage** (CSS-in-JS overhead)
-- **Fast interactions** (utility classes are efficient)
-
-## Performance Analysis
-
-### Key Metrics to Compare
-
-1. **Render Time per Component**
-
-   - Calculate: `total_render_time / component_count`
-   - Lower is better
-
-2. **Memory per Component**
-
-   - Calculate: `peak_memory / component_count`
-   - Lower is better
-
-3. **Interaction Response Time**
-
-   - Average time for single component interactions
-   - Lower is better
-
-4. **Bundle Size Impact**
-   - Check browser dev tools for bundle sizes
-   - Consider trade-offs between features and size
-
-### Benchmarking Recommendations
-
-1. **Test on Different Devices**
-
-   - Desktop (high-end)
-   - Mobile (mid-range)
-   - Low-end devices
-
-2. **Test Different Scenarios**
-
-   - Small datasets (100-500 components)
-   - Medium datasets (1000-2000 components)
-   - Large datasets (5000+ components)
-
-3. **Run Multiple Tests**
-   - Perform 5-10 tests per scenario
-   - Calculate averages and standard deviations
-   - Look for performance degradation patterns
-
-## Data Export
-
-Each application can export performance metrics as JSON files:
-
-- `performance-metrics-dom.json`
-- `performance-metrics-mui.json`
-- `performance-metrics-tailwind.json`
-- `performance-metrics-styled-components.json`
-- `performance-metrics-bootstrap.json`
-
-Use these files for:
-
-- Detailed analysis
-- Creating performance reports
-- Comparing results across different runs
-- Building performance dashboards
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Memory Issues with Large Component Counts**
-
-   - Reduce component count
-   - Check browser memory limits
-   - Monitor for memory leaks
-
-2. **Slow Rendering**
-
-   - Check browser performance tab
-   - Look for blocking operations
-   - Consider component optimization
-
-3. **Inconsistent Results**
-   - Close other browser tabs
-   - Disable browser extensions
-   - Run tests in incognito mode
-
-## Contributing
-
-To add new styling libraries or improve the testing framework:
-
-1. Create a new project directory
-2. Copy the performance utilities
-3. Implement the stress test component
-4. Follow the same interface patterns
-5. Update this README
-
-## License
+## 📄 License
 
 This project is for educational and testing purposes. Use responsibly and consider the specific requirements of your application when choosing a styling approach.

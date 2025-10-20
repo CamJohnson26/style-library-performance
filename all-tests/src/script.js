@@ -199,7 +199,7 @@ function showLoading() {
 // Load bundle sizes from built projects
 async function loadBundleSizes() {
     try {
-        const response = await fetch('/api/bundle-sizes');
+        const response = await fetch('/api/bundle-sizes.json');
         if (response.ok) {
             bundleSizes = await response.json();
             // Update library data with bundle sizes
