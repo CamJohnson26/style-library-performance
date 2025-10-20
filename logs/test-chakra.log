@@ -1,0 +1,11 @@
+
+> test-chakra@0.0.0 dev
+> vite --port 5178
+
+
+  VITE v7.1.11  ready in 438 ms
+
+  ➜  Local:   http://localhost:5178/
+  ➜  Network: use --host to expose
+10:49:32 AM [vite] (client) hmr update /src/App.tsx
+10:49:32 AM [vite] (client) hmr update /src/StressTest.tsx

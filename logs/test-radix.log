@@ -1,0 +1,11 @@
+
+> test-radix@0.0.0 dev
+> vite --port 5177
+
+
+  VITE v7.1.11  ready in 446 ms
+
+  ➜  Local:   http://localhost:5177/
+  ➜  Network: use --host to expose
+10:49:32 AM [vite] (client) hmr update /src/App.tsx
+10:49:32 AM [vite] (client) hmr update /src/StressTest.tsx
