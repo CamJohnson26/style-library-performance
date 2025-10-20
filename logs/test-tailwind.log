@@ -1,0 +1,18 @@
+
+> test-tailwind@0.0.0 dev
+> vite --port 5175
+
+
+  VITE v7.1.11  ready in 128 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: use --host to expose
+10:20:50 AM [vite] (client) hmr update /src/index.css
+10:21:52 AM [vite] (client) hmr update /src/index.css
+10:22:05 AM [vite] (client) hmr update /src/index.css
+10:22:25 AM [vite] (client) hmr update /src/index.css
+10:22:25 AM [vite] (client) hmr update /src/index.css
+10:22:27 AM [vite] (client) hmr update /src/index.css
+10:22:27 AM [vite] (client) hmr update /src/index.css
+10:22:27 AM [vite] (client) hmr update /src/index.css
+10:22:27 AM [vite] (client) hmr update /src/index.css

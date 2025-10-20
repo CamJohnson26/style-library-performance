@@ -1,0 +1,9 @@
+
+> test-dom@0.0.0 dev
+> vite --port 5173
+
+
+  VITE v7.1.11  ready in 135 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose

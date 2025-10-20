@@ -1,0 +1,9 @@
+
+> test-mui@0.0.0 dev
+> vite --port 5174
+
+
+  VITE v7.1.11  ready in 127 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
