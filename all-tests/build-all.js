@@ -106,9 +106,9 @@ async function buildProject(projectName) {
             });
         }
 
-        // Build the project with correct base path
+        // Build the project with correct base path for GitHub Pages
         console.log(`  🏗️  Building ${projectName}...`);
-        execSync(`npm run build -- --base=/${projectName}/`, { 
+        execSync(`npm run build -- --base=/all-tests/${projectName}/`, { 
             cwd: projectDir, 
             stdio: 'pipe',
             timeout: 300000 // 5 minutes timeout
