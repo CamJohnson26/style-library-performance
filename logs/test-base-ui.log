@@ -1,9 +1,0 @@
-
-> test-base-ui@0.0.0 dev
-> vite --port 5181
-
-
-  VITE v7.1.11  ready in 267 ms
-
-  ➜  Local:   http://localhost:5181/
-  ➜  Network: use --host to expose

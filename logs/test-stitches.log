@@ -1,9 +1,0 @@
-
-> test-stitches@0.0.0 dev
-> vite --port 5182
-
-
-  VITE v7.1.11  ready in 425 ms
-
-  ➜  Local:   http://localhost:5182/
-  ➜  Network: use --host to expose

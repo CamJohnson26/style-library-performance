@@ -1,9 +1,0 @@
-
-> test-cva@0.0.0 dev
-> vite --port 5184
-
-
-  VITE v7.1.11  ready in 479 ms
-
-  ➜  Local:   http://localhost:5184/
-  ➜  Network: use --host to expose

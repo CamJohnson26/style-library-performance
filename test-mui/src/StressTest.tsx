@@ -19,7 +19,6 @@ import {
     Chip,
     Container,
     Divider,
-    Grid,
     IconButton,
     LinearProgress,
     Paper,
@@ -47,7 +46,9 @@ interface TestItem {
   category: string;
 }
 
-const StyledCard = styled(Card)(({ theme, active }: { theme?: any; active?: boolean }) => ({
+const StyledCard = styled(Card, {
+  shouldForwardProp: (prop) => prop !== 'active',
+})<{ active?: boolean }>(({ theme, active }) => ({
   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   cursor: 'pointer',
   position: 'relative',
@@ -220,9 +221,9 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
           )}
         </Paper>
 
-        <Grid container spacing={3}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
           {items.map((item) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={item.id}>
+            <Box sx={{ flex: '1 1 300px', minWidth: '250px' }} key={item.id}>
               <StyledCard 
                 active={item.isActive}
                 onClick={() => handleItemClick(item.id)}
@@ -265,9 +266,9 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
                   </Button>
                 </CardActions>
               </StyledCard>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {showMetrics && metrics.length > 0 && (
           <Paper elevation={2} sx={{ p: 3, mt: 4 }}>
@@ -278,8 +279,8 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
             
             <Divider sx={{ mb: 3 }} />
             
-            <Grid container spacing={3}>
-              <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+              <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                 <MetricCard>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Timer color="primary" />
@@ -291,9 +292,9 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
                     {averageRenderTime.toFixed(2)}ms
                   </Typography>
                 </MetricCard>
-              </Grid>
+              </Box>
               
-              <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                 <MetricCard>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Speed color="secondary" />
@@ -305,9 +306,9 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
                     {averageInteractionTime.toFixed(2)}ms
                   </Typography>
                 </MetricCard>
-              </Grid>
+              </Box>
               
-              <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                 <MetricCard>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Memory color="warning" />
@@ -319,9 +320,9 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
                     {peakMemoryUsage.toFixed(2)}MB
                   </Typography>
                 </MetricCard>
-              </Grid>
+              </Box>
               
-              <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                 <MetricCard>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Assessment color="info" />
@@ -333,8 +334,8 @@ const StressTest: React.FC<StressTestProps> = ({ componentCount, onMetricsUpdate
                     {metrics.length}
                   </Typography>
                 </MetricCard>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </Paper>
         )}
       </Box>

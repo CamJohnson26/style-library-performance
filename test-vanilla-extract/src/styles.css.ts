@@ -116,9 +116,6 @@ export const itemCard = style({
     transition: 'transform 300ms',
   },
   
-  ':hover::before': {
-    transform: 'scaleX(1)',
-  },
 });
 
 export const itemCardVariants = styleVariants({

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Library Performance Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎨 Styling Library Performance Comparison</h1>
+            <p class="subtitle">Comprehensive analysis of modern CSS-in-JS and styling frameworks</p>
+            <div class="stats-overview">
+                <div class="stat">
+                    <span class="stat-number" id="total-libraries">0</span>
+                    <span class="stat-label">Libraries Tested</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="total-bundle-size">0 KB</span>
+                    <span class="stat-label">Total Bundle Size</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="avg-bundle-size">0 KB</span>
+                    <span class="stat-label">Average Bundle Size</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="name">Name</option>
+                        <option value="bundle-size">Bundle Size</option>
+                        <option value="year">Release Year</option>
+                        <option value="type">Styling Type</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-type">Filter by type:</label>
+                    <select id="filter-type">
+                        <option value="all">All Types</option>
+                        <option value="css-in-js">CSS-in-JS</option>
+                        <option value="utility">Utility-First</option>
+                        <option value="component">Component Library</option>
+                        <option value="vanilla">Vanilla CSS</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="libraries-grid" id="libraries-grid">
+                <!-- Libraries will be dynamically loaded here -->
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Built with ❤️ for the React community • <a href="https://github.com" target="_blank">View Source</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

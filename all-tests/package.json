@@ -1,0 +1,17 @@
+{
+  "name": "all-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Comprehensive styling library performance comparison dashboard",
+  "scripts": {
+    "build": "node build-all.js",
+    "serve": "node server.js",
+    "dev": "node server.js",
+    "start": "npm run build && npm run serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10"
+  }
+}

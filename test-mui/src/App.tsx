@@ -18,7 +18,6 @@ import {
     createTheme,
     CssBaseline,
     Divider,
-    Grid,
     Paper,
     Snackbar,
     Stack,
@@ -163,8 +162,8 @@ function App() {
               </Typography>
               <Divider sx={{ mb: 3 }} />
               
-              <Grid container spacing={3}>
-                <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+                <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                   <Card elevation={1}>
                     <CardContent>
                       <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
@@ -178,9 +177,9 @@ function App() {
                       </Typography>
                     </CardContent>
                   </Card>
-                </Grid>
+                </Box>
                 
-                <Grid item xs={12} sm={6} md={3}>
+                <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                   <Card elevation={1}>
                     <CardContent>
                       <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
@@ -194,9 +193,9 @@ function App() {
                       </Typography>
                     </CardContent>
                   </Card>
-                </Grid>
+                </Box>
                 
-                <Grid item xs={12} sm={6} md={3}>
+                <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                   <Card elevation={1}>
                     <CardContent>
                       <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
@@ -210,9 +209,9 @@ function App() {
                       </Typography>
                     </CardContent>
                   </Card>
-                </Grid>
+                </Box>
                 
-                <Grid item xs={12} sm={6} md={3}>
+                <Box sx={{ flex: '1 1 300px', minWidth: '250px' }}>
                   <Card elevation={1}>
                     <CardContent>
                       <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
@@ -226,8 +225,8 @@ function App() {
                       </Typography>
                     </CardContent>
                   </Card>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
             </Paper>
           )}
         </Container>
