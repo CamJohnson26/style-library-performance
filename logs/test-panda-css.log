@@ -1,0 +1,10 @@
+
+> test-panda-css@0.0.0 dev
+> vite --port 5180
+
+
+  VITE v7.1.11  ready in 250 ms
+
+  ➜  Local:   http://localhost:5180/
+  ➜  Network: use --host to expose
+🐼 info [hrtime] Extracted in (16.42ms)

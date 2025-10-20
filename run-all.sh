@@ -45,6 +45,9 @@ start_project "test-tailwind" "test-tailwind" "5175"
 start_project "test-shadcn" "test-shadcn" "5176"
 start_project "test-radix" "test-radix" "5177"
 start_project "test-chakra" "test-chakra" "5178"
+start_project "test-reshaped" "test-reshaped" "5179"
+start_project "test-panda-css" "test-panda-css" "5180"
+start_project "test-base-ui" "test-base-ui" "5181"
 
 echo ""
 echo "⏳ Waiting for servers to start..."
@@ -52,7 +55,7 @@ sleep 3
 
 # Verify servers are running
 echo "🔍 Verifying servers..."
-for port in 5173 5174 5175 5176 5177 5178; do
+for port in 5173 5174 5175 5176 5177 5178 5179 5180 5181; do
     if curl -s "http://localhost:$port" > /dev/null 2>&1; then
         echo "   ✅ Port $port: Server running"
     else
@@ -70,6 +73,9 @@ echo "   • Tailwind CSS:   http://localhost:5175"
 echo "   • shadcn/ui:      http://localhost:5176"
 echo "   • Radix UI:       http://localhost:5177"
 echo "   • Chakra UI:      http://localhost:5178"
+echo "   • Reshaped:       http://localhost:5179"
+echo "   • Panda CSS:      http://localhost:5180"
+echo "   • Base UI:        http://localhost:5181"
 echo ""
 echo "📊 Performance Testing Instructions:"
 echo "   1. Open each application in separate browser tabs"

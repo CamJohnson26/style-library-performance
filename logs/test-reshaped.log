@@ -1,0 +1,9 @@
+
+> test-reshaped@0.0.0 dev
+> vite --port 5179
+
+
+  VITE v7.1.11  ready in 238 ms
+
+  ➜  Local:   http://localhost:5179/
+  ➜  Network: use --host to expose

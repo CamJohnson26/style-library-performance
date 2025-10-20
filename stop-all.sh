@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Stop all styling library performance test applications
+# Now includes: DOM, MUI, Tailwind, shadcn/ui, Radix UI, Chakra UI, Reshaped, Panda CSS, Base UI
 
 echo "🛑 Stopping all Styling Library Performance Tests..."
 

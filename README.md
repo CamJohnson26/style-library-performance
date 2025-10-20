@@ -1,6 +1,6 @@
 # Styling Library Performance Test
 
-This project contains three separate React applications, each using a different styling approach to test and compare their performance characteristics.
+This project contains nine separate React applications, each using a different styling approach to test and compare their performance characteristics.
 
 ## Projects Overview
 
@@ -22,6 +22,42 @@ This project contains three separate React applications, each using a different 
 - **Approach**: Utility-first CSS framework
 - **Bundle Size**: Medium (includes Tailwind CSS)
 
+### 4. test-shadcn (shadcn/ui)
+
+- **Styling**: Radix UI primitives with Tailwind CSS
+- **Approach**: Headless components with utility-first styling
+- **Bundle Size**: Medium (includes Radix UI and Tailwind)
+
+### 5. test-radix (Radix UI)
+
+- **Styling**: Radix UI primitives with custom CSS
+- **Approach**: Unstyled, accessible components
+- **Bundle Size**: Medium (includes Radix UI primitives)
+
+### 6. test-chakra (Chakra UI)
+
+- **Styling**: Chakra UI components with Emotion
+- **Approach**: Component-based styling with theme system
+- **Bundle Size**: Large (includes Chakra UI and Emotion)
+
+### 7. test-reshaped (Reshaped)
+
+- **Styling**: Reshaped design system components
+- **Approach**: Modern React component library with theme system
+- **Bundle Size**: Medium (includes Reshaped components)
+
+### 8. test-panda-css (Panda CSS)
+
+- **Styling**: Build-time CSS-in-JS with Panda CSS
+- **Approach**: Type-safe styling with compile-time generation
+- **Bundle Size**: Small (build-time CSS generation)
+
+### 9. test-base-ui (Base UI)
+
+- **Styling**: MUI Base components with custom CSS
+- **Approach**: Unstyled, accessible components
+- **Bundle Size**: Small (minimal unstyled components)
+
 ## Performance Metrics
 
 Each application measures the following performance indicators:
@@ -40,42 +76,83 @@ Each application measures the following performance indicators:
 
 ### Installation
 
-1. Navigate to each project directory:
+1. Navigate to each project directory and install dependencies:
 
    ```bash
-   cd test-dom
-   npm install
+   # Original projects
+   cd test-dom && npm install && cd ..
+   cd test-mui && npm install && cd ..
+   cd test-tailwind && npm install && cd ..
+   cd test-shadcn && npm install && cd ..
+   cd test-radix && npm install && cd ..
+   cd test-chakra && npm install && cd ..
 
-   cd ../test-mui
-   npm install
-
-   cd ../test-tailwind
-   npm install
+   # New projects
+   cd test-reshaped && npm install && cd ..
+   cd test-panda-css && npm install && cd ..
+   cd test-base-ui && npm install && cd ..
    ```
 
 ### Running the Tests
 
-Start each application in development mode:
+#### Option 1: Run All Projects Simultaneously (Recommended)
+
+Use the provided script to start all projects at once:
+
+```bash
+./run-all.sh
+```
+
+This will start all 9 projects on different ports:
+
+- Vanilla CSS: http://localhost:5173
+- Material-UI: http://localhost:5174
+- Tailwind CSS: http://localhost:5175
+- shadcn/ui: http://localhost:5176
+- Radix UI: http://localhost:5177
+- Chakra UI: http://localhost:5178
+- Reshaped: http://localhost:5179
+- Panda CSS: http://localhost:5180
+- Base UI: http://localhost:5181
+
+To stop all projects:
+
+```bash
+./stop-all.sh
+```
+
+#### Option 2: Run Individual Projects
+
+Start each application individually in separate terminals:
 
 ```bash
 # Terminal 1 - Vanilla CSS
-cd test-dom
-npm run dev
+cd test-dom && npm run dev
 
 # Terminal 2 - Material-UI
-cd test-mui
-npm run dev
+cd test-mui && npm run dev
 
 # Terminal 3 - Tailwind CSS
-cd test-tailwind
-npm run dev
+cd test-tailwind && npm run dev
+
+# Terminal 4 - shadcn/ui
+cd test-shadcn && npm run dev
+
+# Terminal 5 - Radix UI
+cd test-radix && npm run dev
+
+# Terminal 6 - Chakra UI
+cd test-chakra && npm run dev
+
+# Terminal 7 - Reshaped
+cd test-reshaped && npm run dev
+
+# Terminal 8 - Panda CSS
+cd test-panda-css && npm run dev
+
+# Terminal 9 - Base UI
+cd test-base-ui && npm run dev
 ```
-
-Each application will be available at:
-
-- test-dom: http://localhost:5173
-- test-mui: http://localhost:5173
-- test-tailwind: http://localhost:5173
 
 ## How to Use
 
