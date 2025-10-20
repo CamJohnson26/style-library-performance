@@ -286,7 +286,7 @@ function renderLibraries() {
             </div>
             
             <div class="library-actions">
-                <a href="/test-${lib.id}/" class="btn btn-primary" target="_blank">
+                <a href="./test-${lib.id}/" class="btn btn-primary" target="_blank">
                     🚀 Test Performance
                 </a>
                 <a href="${lib.website}" class="btn btn-secondary btn-icon" target="_blank" title="Visit Website">
@@ -301,7 +301,7 @@ function renderLibraries() {
         card.addEventListener('click', (e) => {
             if (!e.target.closest('a')) {
                 const libraryId = card.dataset.library;
-                window.open(`/test-${libraryId}/`, '_blank');
+                window.open(`./test-${libraryId}/`, '_blank');
             }
         });
     });
