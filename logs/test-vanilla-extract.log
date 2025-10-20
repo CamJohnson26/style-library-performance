@@ -1,0 +1,9 @@
+
+> test-vanilla-extract@0.0.0 dev
+> vite --port 5183
+
+
+  VITE v7.1.11  ready in 603 ms
+
+  ➜  Local:   http://localhost:5183/
+  ➜  Network: use --host to expose
