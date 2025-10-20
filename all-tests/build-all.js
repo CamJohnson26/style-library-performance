@@ -108,11 +108,27 @@ async function buildProject(projectName) {
 
         // Build the project with relative base path for GitHub Pages
         console.log(`  🏗️  Building ${projectName}...`);
-        execSync(`npm run build -- --base=./`, { 
-            cwd: projectDir, 
-            stdio: 'pipe',
-            timeout: 300000 // 5 minutes timeout
-        });
+        
+        // Temporarily modify vite config to use relative base path
+        const viteConfigPath = path.join(projectDir, 'vite.config.ts');
+        const originalConfig = await fs.readFile(viteConfigPath, 'utf8');
+        const modifiedConfig = originalConfig.replace(
+            /export default defineConfig\({/,
+            `export default defineConfig({
+  base: './',`
+        );
+        await fs.writeFile(viteConfigPath, modifiedConfig);
+        
+        try {
+            execSync(`npm run build`, { 
+                cwd: projectDir, 
+                stdio: 'pipe',
+                timeout: 300000 // 5 minutes timeout
+            });
+        } finally {
+            // Restore original config
+            await fs.writeFile(viteConfigPath, originalConfig);
+        }
 
         // Copy built files to dist
         await copyProjectFiles(projectName, projectDir);
