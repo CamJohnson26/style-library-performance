@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Styling Library Performance Test Runner
-# This script starts all three test applications simultaneously
+# This script starts all test applications simultaneously
 
 echo "🚀 Starting Styling Library Performance Tests..."
 echo ""
@@ -48,6 +48,9 @@ start_project "test-chakra" "test-chakra" "5178"
 start_project "test-reshaped" "test-reshaped" "5179"
 start_project "test-panda-css" "test-panda-css" "5180"
 start_project "test-base-ui" "test-base-ui" "5181"
+start_project "test-stitches" "test-stitches" "5182"
+start_project "test-vanilla-extract" "test-vanilla-extract" "5183"
+start_project "test-cva" "test-cva" "5184"
 
 echo ""
 echo "⏳ Waiting for servers to start..."
@@ -55,7 +58,7 @@ sleep 3
 
 # Verify servers are running
 echo "🔍 Verifying servers..."
-for port in 5173 5174 5175 5176 5177 5178 5179 5180 5181; do
+for port in 5173 5174 5175 5176 5177 5178 5179 5180 5181 5182 5183 5184; do
     if curl -s "http://localhost:$port" > /dev/null 2>&1; then
         echo "   ✅ Port $port: Server running"
     else
@@ -76,6 +79,9 @@ echo "   • Chakra UI:      http://localhost:5178"
 echo "   • Reshaped:       http://localhost:5179"
 echo "   • Panda CSS:      http://localhost:5180"
 echo "   • Base UI:        http://localhost:5181"
+echo "   • Stitches:       http://localhost:5182"
+echo "   • Vanilla Extract: http://localhost:5183"
+echo "   • CVA:            http://localhost:5184"
 echo ""
 echo "📊 Performance Testing Instructions:"
 echo "   1. Open each application in separate browser tabs"
