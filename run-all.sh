@@ -51,6 +51,8 @@ start_project "test-base-ui" "test-base-ui" "5181"
 start_project "test-stitches" "test-stitches" "5182"
 start_project "test-vanilla-extract" "test-vanilla-extract" "5183"
 start_project "test-cva" "test-cva" "5184"
+start_project "test-styled-components" "test-styled-components" "5185"
+start_project "test-bootstrap" "test-bootstrap" "5186"
 
 echo ""
 echo "⏳ Waiting for servers to start..."
@@ -58,7 +60,7 @@ sleep 3
 
 # Verify servers are running
 echo "🔍 Verifying servers..."
-for port in 5173 5174 5175 5176 5177 5178 5179 5180 5181 5182 5183 5184; do
+for port in 5173 5174 5175 5176 5177 5178 5179 5180 5181 5182 5183 5184 5185 5186; do
     if curl -s "http://localhost:$port" > /dev/null 2>&1; then
         echo "   ✅ Port $port: Server running"
     else
@@ -82,6 +84,8 @@ echo "   • Base UI:        http://localhost:5181"
 echo "   • Stitches:       http://localhost:5182"
 echo "   • Vanilla Extract: http://localhost:5183"
 echo "   • CVA:            http://localhost:5184"
+echo "   • Styled Components: http://localhost:5185"
+echo "   • Bootstrap:      http://localhost:5186"
 echo ""
 echo "📊 Performance Testing Instructions:"
 echo "   1. Open each application in separate browser tabs"

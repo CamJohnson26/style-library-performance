@@ -1,0 +1,9 @@
+
+> test-styled-components@0.0.0 dev
+> vite --port 5185
+
+
+  VITE v7.1.11  ready in 611 ms
+
+  ➜  Local:   http://localhost:5185/
+  ➜  Network: use --host to expose

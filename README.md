@@ -1,6 +1,6 @@
 # Styling Library Performance Test
 
-This project contains nine separate React applications, each using a different styling approach to test and compare their performance characteristics.
+This project contains eleven separate React applications, each using a different styling approach to test and compare their performance characteristics.
 
 ## Projects Overview
 
@@ -58,6 +58,18 @@ This project contains nine separate React applications, each using a different s
 - **Approach**: Unstyled, accessible components
 - **Bundle Size**: Small (minimal unstyled components)
 
+### 10. test-styled-components (Styled Components)
+
+- **Styling**: Styled Components with CSS-in-JS
+- **Approach**: Runtime CSS-in-JS with template literals
+- **Bundle Size**: Medium (includes styled-components runtime)
+
+### 11. test-bootstrap (Bootstrap)
+
+- **Styling**: Bootstrap 5 with React Bootstrap components
+- **Approach**: Utility-first CSS framework with component library
+- **Bundle Size**: Large (includes Bootstrap CSS and React Bootstrap)
+
 ## Performance Metrics
 
 Each application measures the following performance indicators:
@@ -91,6 +103,8 @@ Each application measures the following performance indicators:
    cd test-reshaped && npm install && cd ..
    cd test-panda-css && npm install && cd ..
    cd test-base-ui && npm install && cd ..
+   cd test-styled-components && npm install && cd ..
+   cd test-bootstrap && npm install && cd ..
    ```
 
 ### Running the Tests
@@ -103,7 +117,7 @@ Use the provided script to start all projects at once:
 ./run-all.sh
 ```
 
-This will start all 9 projects on different ports:
+This will start all 11 projects on different ports:
 
 - Vanilla CSS: http://localhost:5173
 - Material-UI: http://localhost:5174
@@ -114,6 +128,8 @@ This will start all 9 projects on different ports:
 - Reshaped: http://localhost:5179
 - Panda CSS: http://localhost:5180
 - Base UI: http://localhost:5181
+- Styled Components: http://localhost:5185
+- Bootstrap: http://localhost:5186
 
 To stop all projects:
 
@@ -152,6 +168,12 @@ cd test-panda-css && npm run dev
 
 # Terminal 9 - Base UI
 cd test-base-ui && npm run dev
+
+# Terminal 10 - Styled Components
+cd test-styled-components && npm run dev
+
+# Terminal 11 - Bootstrap
+cd test-bootstrap && npm run dev
 ```
 
 ## How to Use
@@ -254,6 +276,8 @@ Each application can export performance metrics as JSON files:
 - `performance-metrics-dom.json`
 - `performance-metrics-mui.json`
 - `performance-metrics-tailwind.json`
+- `performance-metrics-styled-components.json`
+- `performance-metrics-bootstrap.json`
 
 Use these files for:
 

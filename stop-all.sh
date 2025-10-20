@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Stop all styling library performance test applications
-# Now includes: DOM, MUI, Tailwind, shadcn/ui, Radix UI, Chakra UI, Reshaped, Panda CSS, Base UI, Stitches, Vanilla Extract, CVA
+# Now includes: DOM, MUI, Tailwind, shadcn/ui, Radix UI, Chakra UI, Reshaped, Panda CSS, Base UI, Stitches, Vanilla Extract, CVA, Styled Components, Bootstrap
 
 echo "🛑 Stopping all Styling Library Performance Tests..."
 
